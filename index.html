@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Growth Monitoring - Multiple Images</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Plant Growth Monitoring</h1>
+        <div class="input-container">
+            <input type="file" id="uploadInput" accept="image/*" multiple>
+            <button id="captureButton">Take Picture</button>
+        </div>
+        <div class="video-container hidden">
+            <video id="webcam" autoplay playsinline></video>
+            <button id="snapButton">Capture Image</button>
+        </div>
+        <div class="image-gallery" id="imageGallery"></div>
+        <div class="prediction-container">
+            <div id="predictedLabel">Plant Condition: </div>
+            <canvas id="predictionGraph"></canvas>
+        </div>
+    </div>
+</body>
+</html>
